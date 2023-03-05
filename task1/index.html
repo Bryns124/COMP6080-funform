@@ -1,1 +1,54 @@
-<p>Hello world</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>FunForm</title>
+</head>
+<body>
+    <form id="home-details" onsubmit="return false">
+        <table style="width:100%">
+            <tr>
+              <td>Street Name</td>
+              <td><input type="text" id="streetname" name="streetname" onblur="mainRender();"></td>
+            </tr>
+            <tr>
+              <td>Suburb</td>
+              <td><input type="text" id="suburb" name="suburb" onblur="mainRender();"></td>
+            </tr>
+            <tr>
+                <td>Postcode</td>
+                <td><input type="number" id="postcode" name="postcode" onblur="mainRender();"></td>
+            </tr>
+            <tr>
+                <td>Date of birth</td>
+                <td><input type="text" id="dateofbirth" name="dateofbirth" onblur="mainRender();"></td>
+            </tr>
+            <tr>
+                <td>Building type</td>
+                <td>
+                    <select type="text" id="building" name="building" onchange="mainRender();">
+                        <option value="apartment" selected="selected">Apartment</option>
+                        <option value="house">House</option>
+                </td>
+            </tr>
+            <tr>
+                <td>Features</td>
+                <td id="features" onchange="mainRender();">
+                    <input type="checkbox" id="feature1" name="heating">Heating
+                    <input type="checkbox" id="feature2" name="airconditioning">AirConditioning
+                    <input type="checkbox" id="feature3" name="pool">Pool
+                    <input type="checkbox" id="feature4" name="sandpit">Sandpit
+                    <button id="selector" name="selector" onclick="selectDeselectAll();">Select All</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <button id="reset-btn" onclick="resetAll();">Reset</button>
+    <textarea id="textarea"></textarea>
+    <script src="./main.js"></script>
+</body>
+</html>
